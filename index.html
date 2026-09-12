@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="it" class="h-full" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#7A2E2E">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAADf0lEQVR4nO3dMWhcdRzAcSsZRCtUxUncS4VbhE6WDC5VlyB2FiddipXqYI0gmDoIhSIIdepQpINVIlJaKrh0KwQUrbg4FK2T4FKoCI0OhRDJWXL5nu9y8PlMdy/J+/8PvvzyeEdye06MRvfBTt0/6w0w3wREIiCShc1Plq9entU+mC8rhw7ffWACkQiIZGHs0Y0BBZttvcgxgUgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIFgZY44G9e9+8dGGAhabrhyvfrL7/4d3Hc/ES/l5fP7n4/MCLmkAkAiIREImASIa4iN7q2merVz46M9GPvPje2weeXdz+95997djN6z9NtMTrX3z68OOPjf3Sn7durRw6vPX4k6OnXv741PaX2MELv4eXVpb3Lz4zrbPtjAlEIiASAZEIiERAJAIiERCJgEiGuJG4fufOjW+/33zkj5u/DbDupH69/uOD+/ZtPP39xi+z28u2XFhemfUWBgnor9u3zx19a4CFos/fPTnrLcwfv8JIBEQymzdT2aanl1547vjRzUd28Cbx/8oEIhEQiYBIBEQiIBIBkQiIxH2gQR08snTwyNKsdzFNJhCJgEgERCIgEhfRg5r0L1O3vpm625hAJAIiERCJgEgERCIgEgGRuA+0q62tXlxbvTjrXdyLCUQiIBIBkQiIREAkAiIREIn7QPPtjS/PP/ToIxtPf762dv74O0NuwAQiERCJgEgERCIgEgGRCIhEQCS77kbiK5+cfuLA/imc58zpsce/+uDUd5e+nvRs0/rceP+dA/5FQCQCIhEQya67iD776rFZb2GM//rceEwgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIZGHs0eWrlwfeB3PKBCIREMmeE6PRrPfAHDOBSARE8g9ncm003OHP4QAAAABJRU5ErkJggg==">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAADf0lEQVR4nO3dMWhcdRzAcSsZRCtUxUncS4VbhE6WDC5VlyB2FiddipXqYI0gmDoIhSIIdepQpINVIlJaKrh0KwQUrbg4FK2T4FKoCI0OhRDJWXL5nu9y8PlMdy/J+/8PvvzyeEdye06MRvfBTt0/6w0w3wREIiCShc1Plq9entU+mC8rhw7ffWACkQiIZGHs0Y0BBZttvcgxgUgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIFgZY44G9e9+8dGGAhabrhyvfrL7/4d3Hc/ES/l5fP7n4/MCLmkAkAiIREImASIa4iN7q2merVz46M9GPvPje2weeXdz+95997djN6z9NtMTrX3z68OOPjf3Sn7durRw6vPX4k6OnXv741PaX2MELv4eXVpb3Lz4zrbPtjAlEIiASAZEIiERAJAIiERCJgEiGuJG4fufOjW+/33zkj5u/DbDupH69/uOD+/ZtPP39xi+z28u2XFhemfUWBgnor9u3zx19a4CFos/fPTnrLcwfv8JIBEQymzdT2aanl1547vjRzUd28Cbx/8oEIhEQiYBIBEQiIBIBkQiIxH2gQR08snTwyNKsdzFNJhCJgEgERCIgEhfRg5r0L1O3vpm625hAJAIiERCJgEgERCIgEgGRuA+0q62tXlxbvTjrXdyLCUQiIBIBkQiIREAkAiIREIn7QPPtjS/PP/ToIxtPf762dv74O0NuwAQiERCJgEgERCIgEgGRCIhEQCS77kbiK5+cfuLA/imc58zpsce/+uDUd5e+nvRs0/rceP+dA/5FQCQCIhEQya67iD776rFZb2GM//rceEwgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEgERCIgEgGRCIhEQCQCIhEQiYBIBEQiIBIBkQiIZGHs0eWrlwfeB3PKBCIREMmeE6PRrPfAHDOBSARE8g9ncm003OHP4QAAAABJRU5ErkJggg==">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Taccuino Eventi">
+<title>Taccuino Eventi — Art &amp; Event Planner</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{
+  --paper:#F6F1E6;
+  --paper-soft:#EEE6D3;
+  --card:#FCFAF4;
+  --ink:#221F1A;
+  --ink-soft:#5A5346;
+  --ink-mute:#8A8272;
+  --line:#DED2B4;
+  --accent:#7A2E2E;
+  --accent-soft:#F1E0DC;
+  --accent-ink:#FBF3EC;
+  --gold:#A9762F;
+  --cat-exhibition:#5B3758;
+  --cat-concert:#7A2E2E;
+  --cat-performance:#1F5A56;
+  --cat-wishlist:#9C6B1F;
+  --shadow:0 1px 2px rgba(34,31,26,.10), 0 1px 1px rgba(34,31,26,.06);
+}
+[data-theme="dark"]{
+  --paper:#1B1815;
+  --paper-soft:#242019;
+  --card:#242019;
+  --ink:#F1EADC;
+  --ink-soft:#BCB29C;
+  --ink-mute:#8C8371;
+  --line:#3B352A;
+  --accent:#D08A73;
+  --accent-soft:#3A2925;
+  --accent-ink:#241A16;
+  --gold:#D6A85C;
+  --cat-exhibition:#C598C0;
+  --cat-concert:#E39A93;
+  --cat-performance:#7FC5C0;
+  --cat-wishlist:#E0B674;
+  --shadow:0 1px 3px rgba(0,0,0,.45);
+}
+*{ scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+::-webkit-scrollbar{ width:7px; height:7px; }
+::-webkit-scrollbar-thumb{ background:var(--line); border-radius:4px; }
+html, body{ height:100%; min-height:100%; }
+@supports (height: 100dvh){ html, body{ height:100dvh; } }
+body{ background:var(--paper); color:var(--ink); font-family:'Archivo',sans-serif; font-size:15px; }
+.font-display{ font-family:'Fraunces',serif; font-optical-sizing:auto; }
+.card{ background:var(--card); border:1px solid var(--line); box-shadow:var(--shadow); }
+.hairline{ border-color:var(--line) !important; }
+.ink{ color:var(--ink); } .ink-soft{ color:var(--ink-soft); } .ink-mute{ color:var(--ink-mute); }
+.bg-paper{ background:var(--paper); } .bg-paper-soft{ background:var(--paper-soft); } .bg-card{ background:var(--card); }
+.btn-accent{ background:var(--accent); color:var(--accent-ink); font-weight:700; }
+.btn-accent:hover{ filter:brightness(1.08); }
+.btn-ghost{ background:transparent; border:1.5px solid var(--line); color:var(--ink); font-weight:600; }
+.btn-ghost:hover{ background:var(--paper-soft); }
+input, select, textarea{ background:var(--card); border:1.5px solid var(--line); color:var(--ink); font-size:14px; }
+input:focus, select:focus, textarea:focus{ outline:2px solid var(--accent); outline-offset:1px; border-color:var(--accent); }
+.chip{ border:1.5px solid var(--line); color:var(--ink-soft); transition:all .15s ease; font-weight:700; }
+.chip.active{ color:var(--accent-ink); background:var(--accent); border-color:var(--accent); }
+.switch{ width:38px; height:21px; border-radius:999px; background:var(--line); position:relative; transition:background .15s; flex-shrink:0; }
+.switch::after{ content:''; position:absolute; top:2px; left:2px; width:17px; height:17px; border-radius:50%; background:var(--card); transition:transform .15s; }
+.switch.on{ background:var(--accent); }
+.switch.on::after{ transform:translateX(17px); }
+.day-cell{ min-height:130px; }
+@media (max-width:768px){ .day-cell{ min-height:80px; } }
+.event-pill{ font-size:12px; line-height:1.25; font-weight:700; }
+.modal-backdrop{ background:rgba(15,13,10,.5); backdrop-filter:blur(2px); }
+.tab-btn.active{ color:var(--ink); border-bottom:2.5px solid var(--accent); background:var(--card); }
+.tab-btn{ border-bottom:2.5px solid transparent; color:var(--ink-mute); font-weight:700; }
+.gantt-cell{ min-width:38px; }
+.gantt-header-row{ position:sticky; top:0; z-index:5; }
+.legend-dot{ width:11px; height:11px; border-radius:4px; display:inline-block; flex-shrink:0; }
+.cat-swatch{ width:26px; height:26px; border-radius:8px; flex-shrink:0; border:2px solid var(--line); cursor:pointer; }
+.cat-swatch.selected{ border-color:var(--ink); box-shadow:0 0 0 2px var(--card), 0 0 0 4px var(--ink); }
+.safe-top{ padding-top:max(0px, env(safe-area-inset-top)); }
+.safe-bottom{ padding-bottom:max(0px, env(safe-area-inset-bottom)); }
+@media (max-width:640px){
+  .day-cell{ padding:4px; }
+  .event-pill{ font-size:10px; padding:2px 4px; }
+  #main-view-area{ padding:8px; }
+  .gantt-cell{ min-width:34px; }
+}
+::selection{ background:var(--accent-soft); }
+</style>
+</head>
+<body class="h-full overflow-hidden text-[15px]">
+
+<div id="toast-container" class="fixed top-4 right-4 z-[70] flex flex-col gap-2 max-w-xs w-full pointer-events-none"></div>
+
+<!-- CONFIRM MODAL -->
+<div id="confirm-modal" class="fixed inset-0 modal-backdrop z-[65] flex items-center justify-center p-4 hidden">
+  <div class="card rounded-2xl w-full max-w-sm p-5 space-y-4">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl flex items-center justify-center text-base" style="background:var(--accent-soft); color:var(--accent);"><i class="fa-solid fa-triangle-exclamation"></i></div>
+      <h3 class="font-display font-semibold text-base">Conferma</h3>
+    </div>
+    <p id="confirm-modal-text" class="text-xs ink-soft leading-relaxed"></p>
+    <div class="flex justify-end gap-2 pt-2 border-t hairline">
+      <button onclick="closeConfirmModal()" class="btn-ghost px-3.5 py-2 text-xs font-semibold rounded-lg">Annulla</button>
+      <button id="confirm-modal-btn" class="btn-accent px-4 py-2 text-xs font-semibold rounded-lg">Conferma</button>
+    </div>
+  </div>
+</div>
+
+<!-- EVENT MODAL -->
+<div id="event-modal" class="fixed inset-0 modal-backdrop z-[60] flex items-center justify-center p-4 hidden">
+  <div class="card rounded-2xl w-full max-w-lg max-h-[92vh] overflow-y-auto">
+    <div class="p-5 border-b hairline flex items-center justify-between sticky top-0 bg-card">
+      <h3 id="event-modal-title" class="font-display font-semibold text-lg">Nuovo elemento</h3>
+      <button onclick="closeEventModal()" class="w-8 h-8 rounded-lg btn-ghost flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="p-5 space-y-4">
+      <input type="hidden" id="ev-id">
+      <div>
+        <label class="text-[11px] font-semibold ink-soft uppercase tracking-wide">Titolo</label>
+        <input id="ev-title" type="text" placeholder="Es. Mostra diffusa Vernissage Rome" class="w-full mt-1 px-3 py-2 rounded-lg text-sm">
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label class="text-[11px] font-semibold ink-soft uppercase tracking-wide">Categoria</label>
+          <select id="ev-type" class="w-full mt-1 px-3 py-2 rounded-lg text-sm"></select>
+        </div>
+        <div>
+          <label class="text-[11px] font-semibold ink-soft uppercase tracking-wide">Priorità</label>
+          <select id="ev-priority" class="w-full mt-1 px-3 py-2 rounded-lg text-sm">
+            <option value="bassa">Bassa</option>
+            <option value="media" selected>Media</option>
+            <option value="alta">Alta</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label class="text-[11px] font-semibold ink-soft uppercase tracking-wide">Luogo</label>
+        <input id="ev-location" type="text" placeholder="Es. MACRO, Via Nizza 138" class="w-full mt-1 px-3 py-2 rounded-lg text-sm">
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label class="text-[11px] font-semibold ink-soft uppercase tracking-wide">Data inizio</label>
+          <input id="ev-start" type="date" class="w-full mt-1 px-3 py-2 rounded-lg text-sm">
+        </div>
+        <div>
+          <label class="text-[11px] font-semibold ink-soft uppercase tracking-wide">Data fine</label>
+          <input id="ev-end" type="date" class="w-full mt-1 px-3 py-2 rounded-lg text-sm">
+        </div>
+      </div>
+      <div>
+        <label class="text-[11px] font-semibold ink-soft uppercase tracking-wide">Giorno pianificato per la visita <span class="ink-mute font-normal normal-case">(opzionale)</span></label>
+        <input id="ev-planned" type="date" class="w-full mt-1 px-3 py-2 rounded-lg text-sm">
+        <p class="text-[10px] ink-mute mt-1">Se lasci vuoto, un evento con intervallo resta visibile su tutto il periodo sul calendario.</p>
+      </div>
+      <div>
+        <label class="text-[11px] font-semibold ink-soft uppercase tracking-wide">Note</label>
+        <textarea id="ev-notes" rows="2" placeholder="Orari, prezzo, dettagli utili..." class="w-full mt-1 px-3 py-2 rounded-lg text-sm"></textarea>
+      </div>
+      <div class="flex items-center justify-between pt-1">
+        <span class="text-xs font-semibold">Mostra in agenda</span>
+        <div id="ev-active-switch" class="switch on cursor-pointer" onclick="toggleFormActiveSwitch()"></div>
+      </div>
+    </div>
+    <div class="p-5 border-t hairline flex items-center justify-between sticky bottom-0 bg-card">
+      <button id="ev-delete-btn" onclick="deleteEventFromForm()" class="text-xs font-semibold px-3 py-2 rounded-lg hover:opacity-80" style="color:var(--accent);">Elimina</button>
+      <div class="flex gap-2">
+        <button onclick="closeEventModal()" class="btn-ghost px-4 py-2 text-xs font-semibold rounded-lg">Annulla</button>
+        <button onclick="saveEventForm()" class="btn-accent px-4 py-2 text-xs font-semibold rounded-lg">Salva</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- IMPORT / PARSER MODAL -->
+<div id="import-modal" class="fixed inset-0 modal-backdrop z-[60] flex items-center justify-center p-4 hidden">
+  <div class="card rounded-2xl w-full max-w-2xl max-h-[92vh] overflow-y-auto">
+    <div class="p-5 border-b hairline flex items-center justify-between sticky top-0 bg-card">
+      <h3 class="font-display font-semibold text-lg">Parser intelligente</h3>
+      <button onclick="closeImportModal()" class="w-8 h-8 rounded-lg btn-ghost flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="p-5 space-y-3">
+      <p class="text-xs ink-soft leading-relaxed">
+        Incolla un blocco di testo libero. Riconosce intestazioni come <code class="px-1 rounded" style="background:var(--paper-soft)">SINO AL 31 MAGGIO 2026</code>, <code class="px-1 rounded" style="background:var(--paper-soft)">DAL 29 AL 31 MAGGIO</code>, <code class="px-1 rounded" style="background:var(--paper-soft)">GIUGNO 2026</code> (mese intero) o <code class="px-1 rounded" style="background:var(--paper-soft)">MOSTRE ANNUALI</code>. Per ogni riga usa la chiocciola <b>@</b> per il luogo e un trattino <b>-</b> per le note.
+      </p>
+      <textarea id="import-text" rows="7" placeholder="Incolla qui il testo..." class="w-full px-3 py-2 rounded-lg text-xs font-mono"></textarea>
+      <div class="flex justify-between">
+        <button type="button" onclick="loadSampleText()" class="text-xs font-semibold ink-soft hover:underline">Vedi un esempio</button>
+        <button type="button" onclick="parseImportedText()" class="btn-ghost px-3.5 py-2 text-xs font-semibold rounded-lg">Analizza testo</button>
+      </div>
+      <div id="parse-preview-container" class="hidden space-y-2 pt-2 border-t hairline">
+        <p class="text-[11px] font-semibold ink-soft uppercase tracking-wide">Anteprima elementi riconosciuti</p>
+        <div id="parsed-items" class="space-y-1.5 max-h-52 overflow-y-auto pr-1"></div>
+      </div>
+    </div>
+    <div class="p-5 border-t hairline flex justify-end gap-2 sticky bottom-0 bg-card">
+      <button onclick="closeImportModal()" class="btn-ghost px-4 py-2 text-xs font-semibold rounded-lg">Chiudi</button>
+      <button id="btn-confirm-import" disabled onclick="confirmImport()" class="btn-accent opacity-40 px-4 py-2 text-xs font-semibold rounded-lg">Importa nella bacheca</button>
+    </div>
+  </div>
+</div>
+
+<!-- BACKUP MODAL -->
+<div id="backup-modal" class="fixed inset-0 modal-backdrop z-[60] flex items-center justify-center p-4 hidden">
+  <div class="card rounded-2xl w-full max-w-md">
+    <div class="p-5 border-b hairline flex items-center justify-between">
+      <h3 class="font-display font-semibold text-lg">Backup &amp; dati</h3>
+      <button onclick="closeBackupModal()" class="w-8 h-8 rounded-lg btn-ghost flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="p-5 space-y-4">
+      <div class="space-y-2.5 pb-4 border-b hairline">
+        <p class="text-[11px] font-bold ink-soft uppercase tracking-wide">Sincronizzazione Google Sheet</p>
+        <input id="gsheet-url" type="text" onchange="onGSheetUrlChange()" placeholder="Incolla qui l'URL della Web App di Google Apps Script..." class="w-full px-3 py-2.5 rounded-lg text-xs">
+        <button onclick="syncToCloud()" class="w-full btn-accent px-3 py-2.5 text-xs font-bold rounded-lg flex items-center justify-center gap-2"><i class="fa-solid fa-cloud-arrow-up"></i> Salva le modifiche sul cloud</button>
+        <p class="text-[10px] ink-mute">Il caricamento dal cloud avviene da solo ogni volta che apri il planner: qui devi solo salvare quando fai una modifica.</p>
+        <p id="cloud-status" class="text-[10.5px] ink-mute leading-relaxed"></p>
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <button onclick="exportPlannerToFile()" class="btn-ghost px-3 py-2.5 text-xs font-semibold rounded-lg flex items-center justify-center gap-2"><i class="fa-solid fa-file-arrow-down"></i> Scarica backup</button>
+        <label class="btn-ghost px-3 py-2.5 text-xs font-semibold rounded-lg flex items-center justify-center gap-2 cursor-pointer">
+          <i class="fa-solid fa-file-arrow-up"></i> Ripristina file
+          <input type="file" accept="application/json" class="hidden" onchange="importPlannerFromFile(event)">
+        </label>
+      </div>
+      <button onclick="exportICS()" class="w-full btn-ghost px-3 py-2.5 text-xs font-semibold rounded-lg flex items-center justify-center gap-2"><i class="fa-solid fa-file-export"></i> Esporta eventi attivi (.ics)</button>
+      <label class="w-full btn-ghost px-3 py-2.5 text-xs font-semibold rounded-lg flex items-center justify-center gap-2 cursor-pointer">
+        <i class="fa-solid fa-file-import"></i> Importa da file .ics
+        <input type="file" accept=".ics,text/calendar" class="hidden" onchange="importICSFile(event)">
+      </label>
+      <button onclick="clearAllEventsWithConfirm()" class="w-full text-xs font-semibold py-2 rounded-lg hover:opacity-80" style="color:var(--accent)">Svuota tutta la bacheca</button>
+    </div>
+  </div>
+</div>
+
+<!-- CATEGORIES MODAL -->
+<div id="categories-modal" class="fixed inset-0 modal-backdrop z-[60] flex items-center justify-center p-4 hidden">
+  <div class="card rounded-2xl w-full max-w-lg max-h-[92vh] overflow-y-auto">
+    <div class="p-5 border-b hairline flex items-center justify-between sticky top-0 bg-card">
+      <h3 class="font-display font-semibold text-lg">Gestisci categorie</h3>
+      <button onclick="closeCategoriesModal()" class="w-8 h-8 rounded-lg btn-ghost flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="p-5 space-y-4">
+      <div id="categories-list" class="space-y-2"></div>
+      <div class="pt-3 border-t hairline space-y-3">
+        <p class="text-[11px] font-bold ink-soft uppercase tracking-wide">Nuova categoria</p>
+        <div class="flex gap-2">
+          <input id="new-cat-emoji" type="text" maxlength="2" placeholder="🎪" class="w-14 text-center px-2 py-2 rounded-lg text-base">
+          <input id="new-cat-label" type="text" placeholder="Es. Festival" class="flex-1 px-3 py-2 rounded-lg text-sm">
+        </div>
+        <div class="flex items-center gap-2 flex-wrap" id="new-cat-swatches"></div>
+        <button onclick="addNewCategory()" class="w-full btn-accent px-4 py-2.5 text-sm font-bold rounded-lg">Aggiungi categoria</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- APP SHELL -->
+<div class="flex h-full flex-col lg:flex-row">
+
+  <!-- SIDEBAR -->
+  <aside class="w-full lg:w-[26rem] flex flex-col bg-card border-b lg:border-b-0 lg:border-r hairline flex-shrink-0 z-10 lg:h-full">
+    <div class="p-4 border-b hairline safe-top">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center text-lg" style="background:var(--accent); color:var(--accent-ink);"><i class="fa-solid fa-compass-drafting"></i></div>
+          <div>
+            <h1 class="font-display font-semibold text-xl leading-tight">Taccuino Eventi</h1>
+            <p class="text-xs ink-mute font-semibold">Mostre · Live · Performance</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <button onclick="openCategoriesModal()" class="w-9 h-9 rounded-lg btn-ghost flex items-center justify-center text-sm" title="Gestisci categorie"><i class="fa-solid fa-tags"></i></button>
+          <button onclick="toggleDarkMode()" id="theme-toggle-btn" class="w-9 h-9 rounded-lg btn-ghost flex items-center justify-center text-sm" title="Tema chiaro/scuro"><i class="fa-solid fa-moon"></i></button>
+          <button onclick="quickSaveToCloud()" class="w-9 h-9 rounded-lg flex items-center justify-center text-sm btn-accent" title="Salva subito sul cloud"><i class="fa-solid fa-cloud-arrow-up"></i></button>
+          <button onclick="openBackupModal()" class="w-9 h-9 rounded-lg btn-ghost flex items-center justify-center text-sm" title="Backup, JSON e .ics"><i class="fa-solid fa-box-archive"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-3.5 border-b hairline space-y-3">
+      <div class="flex gap-2">
+        <div class="relative flex-1">
+          <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-sm ink-mute"></i>
+          <input id="search-input" oninput="onSearchInput()" type="text" placeholder="Cerca titolo o luogo..." class="w-full pl-10 pr-3 py-2.5 rounded-lg text-sm">
+        </div>
+        <button onclick="openAddEventModal()" class="btn-accent px-4 rounded-lg text-sm font-bold flex items-center gap-1.5"><i class="fa-solid fa-plus"></i> Nuovo</button>
+      </div>
+      <div class="flex flex-wrap gap-1.5" id="category-chips"></div>
+      <div class="grid grid-cols-2 gap-2">
+        <select id="status-filter" onchange="onStatusFilterChange()" class="px-2.5 py-2 rounded-lg text-xs font-semibold">
+          <option value="all">Stato: tutti</option>
+          <option value="active">Stato: attivi</option>
+          <option value="inactive">Stato: disattivi</option>
+        </select>
+        <select id="sort-select" onchange="onSortChange()" class="px-2.5 py-2 rounded-lg text-xs font-semibold">
+          <option value="date">Ordina: data</option>
+          <option value="title">Ordina: titolo A-Z</option>
+          <option value="priority">Ordina: priorità</option>
+          <option value="category">Ordina: categoria</option>
+        </select>
+      </div>
+      <div id="legend-row" class="flex flex-wrap gap-x-3 gap-y-1 pt-0.5"></div>
+    </div>
+
+    <div id="bulk-bar" class="hidden px-3.5 py-2.5 border-b hairline items-center justify-between text-xs" style="background:var(--accent-soft);">
+      <span class="font-bold"><span id="bulk-count">0</span> selezionati</span>
+      <div class="flex gap-1">
+        <button onclick="bulkSetActive(true)" class="px-2.5 py-1.5 rounded-md font-bold hover:opacity-70" title="Attiva">Attiva</button>
+        <button onclick="bulkSetActive(false)" class="px-2.5 py-1.5 rounded-md font-bold hover:opacity-70" title="Disattiva">Disattiva</button>
+        <button onclick="bulkDelete()" class="px-2.5 py-1.5 rounded-md font-bold hover:opacity-70" style="color:var(--accent)" title="Elimina">Elimina</button>
+        <button onclick="clearSelection()" class="px-2.5 py-1.5 rounded-md ink-mute hover:opacity-70" title="Annulla">✕</button>
+      </div>
+    </div>
+
+    <div id="event-list-container" class="hidden lg:block flex-1 overflow-y-auto p-3.5 space-y-2.5"></div>
+    <p id="mobile-hint" class="lg:hidden px-3.5 py-2 text-[11px] ink-mute text-center"><span id="mobile-filtered-count">0</span> elementi corrispondono ai filtri — vedili nella vista <b>Lista</b> qui sotto</p>
+
+    <div class="p-3.5 border-t hairline">
+      <button onclick="openImportModal()" class="w-full btn-ghost px-3 py-3 text-sm font-bold rounded-lg flex items-center justify-center gap-2"><i class="fa-solid fa-wand-magic-sparkles"></i> Importa con il parser</button>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="flex-1 flex flex-col overflow-hidden bg-paper">
+    <div class="p-3 lg:p-4 border-b hairline flex flex-wrap items-center gap-3 justify-between bg-card">
+      <div class="flex items-center gap-1 rounded-lg p-1.5" style="background:var(--paper-soft)">
+        <button id="tab-calendar" onclick="setViewMode('calendar')" class="tab-btn px-3 sm:px-4 py-2 text-sm rounded-md flex items-center gap-2"><i class="fa-regular fa-calendar text-base"></i> <span class="hidden sm:inline">Calendario</span></button>
+        <button id="tab-timeline" onclick="setViewMode('timeline')" class="tab-btn px-3 sm:px-4 py-2 text-sm rounded-md flex items-center gap-2"><i class="fa-solid fa-timeline text-base"></i> <span class="hidden sm:inline">Timeline</span></button>
+        <button id="tab-list" onclick="setViewMode('list')" class="tab-btn px-3 sm:px-4 py-2 text-sm rounded-md flex items-center gap-2"><i class="fa-solid fa-list text-base"></i> <span class="hidden sm:inline">Lista</span></button>
+      </div>
+      <div id="month-nav" class="flex items-center gap-2">
+        <button onclick="changeMonth(-1)" class="w-9 h-9 rounded-lg btn-ghost flex items-center justify-center"><i class="fa-solid fa-chevron-left"></i></button>
+        <button onclick="goToCurrentDate()" class="font-display font-semibold text-base w-44 text-center" id="calendar-month-title">—</button>
+        <button onclick="changeMonth(1)" class="w-9 h-9 rounded-lg btn-ghost flex items-center justify-center"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <div id="main-view-area" class="flex-1 overflow-auto p-3 lg:p-5"></div>
+
+    <div class="border-t hairline bg-card px-4 py-2.5 flex flex-wrap items-center justify-between gap-3 text-xs safe-bottom">
+      <div class="flex items-center gap-4 ink-soft font-medium">
+        <span><b class="ink" id="stat-total">0</b> totali</span>
+        <span><b class="ink" id="stat-active">0</b> attivi</span>
+        <span><b class="ink" id="stat-planned">0</b> pianificati</span>
+      </div>
+      <div id="next-event-banner" class="hidden items-center gap-2 font-bold px-3 py-1.5 rounded-full" style="background:var(--accent-soft); color:var(--accent);">
+        <i class="fa-solid fa-hourglass-half"></i> <span id="next-event-text"></span>
+      </div>
+      <div id="conflict-badge" class="hidden items-center gap-1.5 font-bold px-2.5 py-1.5 rounded-full" style="background:var(--accent-soft); color:var(--accent);">
+        <i class="fa-solid fa-triangle-exclamation"></i> <span id="conflict-count"></span>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+/* ==========================================================================
+   INCOLLA QUI SOTTO l'URL della tua Web App di Google Apps Script
+   (quello che finisce in /exec). Una volta inserito e ricaricato questo
+   index.html su GitHub, la sincronizzazione funzionerà su ogni dispositivo
+   senza dover configurare nulla manualmente.
+   ========================================================================== */
+const DEFAULT_GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbx6hofL9mNRpRKYF-rsiFwEv6Fd2K7MKc91brs7NlYKP9s2XmuzseWT7uoTXRANnqq2iw/exec';
+
+const MONTHS_IT = ["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"];
+const MONTHS_IT_SHORT = ["Gen","Feb","Mar","Apr","Mag","Giu","Lug","Ago","Set","Ott","Nov","Dic"];
+const WEEKDAYS_IT = ["Lun","Mar","Mer","Gio","Ven","Sab","Dom"];
+const ITALIAN_MONTH_MAP = { gennaio:0, febbraio:1, marzo:2, aprile:3, maggio:4, giugno:5, luglio:6, agosto:7, settembre:8, ottobre:9, novembre:10, dicembre:11 };
+
+function pad2(n){ return String(n).padStart(2,'0'); }
+function isoDate(d){ return `${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}`; }
+function todayISO(){ return isoDate(new Date()); }
+function parseISO(iso){
+  if(!iso || typeof iso !== 'string') return null;
+  const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if(!m) return null;
+  const d = new Date(+m[1], +m[2]-1, +m[3]);
+  return isNaN(d.getTime()) ? null : d;
+}
+function formatDateString(iso){
+  const d = parseISO(iso);
+  if(!d) return 'Data non valida';
+  return `${d.getDate()} ${MONTHS_IT_SHORT[d.getMonth()]} ${d.getFullYear()}`;
+}
+function isValidISODate(iso){ return !!parseISO(iso); }
+function daysInMonth(y,m){ return new Date(y, m+1, 0).getDate(); }
+function addDaysISO(iso, n){ const d = parseISO(iso); d.setDate(d.getDate()+n); return isoDate(d); }
+
+const AppState = {
+  events: [
+    { id:'ev-1', title:'Sonorità II (Festival di Esplorazioni Sonore)', location:'Spazio Supernova (Piazza S. Maria in Trastevere 1A)', type:'exhibition', startDate:'2026-05-25', endDate:'2026-05-31', plannedDate:null, notes:'Live performance serali quotidiane. Ingresso gratuito.', priority:'media', active:true },
+    { id:'ev-2', title:'Visual Sound 2026', location:'Castello Savelli Torlonia (Palombara Sabina, RM)', type:'exhibition', startDate:'2026-05-25', endDate:'2026-05-31', plannedDate:null, notes:'Rassegna di elettronica & video mapping nei weekend. Gratuito.', priority:'media', active:true },
+    { id:'ev-3', title:'Giovanni Longo: "Come una diga"', location:"Accademia d'Ungheria - Palazzo Falconieri (Via Giulia 1)", type:'exhibition', startDate:'2026-05-25', endDate:'2026-06-04', plannedDate:null, notes:"Sculture in legno recuperato. Lun-Ven 9-19:30 / Sab 11-19. Gratuito.", priority:'alta', active:true },
+    { id:'ev-4', title:'Theaster Gates (Talk & Ascolto Vinili)', location:'Auditorium MACRO (Via Nizza 138)', type:'performance', startDate:'2026-05-26', endDate:'2026-05-26', plannedDate:'2026-05-26', notes:'Ore 19:30. In inglese. Gratuito fino a esaurimento posti.', priority:'alta', active:true },
+    { id:'ev-5', title:'KLANG: NEST @ IPER Festival', location:'MAAM (Via Prenestina 913)', type:'concert', startDate:'2026-05-29', endDate:'2026-05-29', plannedDate:'2026-05-29', notes:'Ore 19-21. Live elettronico in quadrafonia. Gratuito.', priority:'media', active:true },
+    { id:'ev-6', title:'Lucrecia Dalt live', location:'Auditorium Parco della Musica (Sala Sinopoli)', type:'concert', startDate:'2026-05-29', endDate:'2026-05-29', plannedDate:'2026-05-29', notes:"Ore 21. Elettronica d'avanguardia. Biglietti su Xceed.", priority:'alta', active:true },
+    { id:'ev-7', title:'Mostra diffusa "Vernissage Rome"', location:'Relais Villa Lina (Ronciglione, VT)', type:'exhibition', startDate:'2026-05-29', endDate:'2026-05-31', plannedDate:null, notes:'Weekend fuori porta: arte, performance e installazioni nel parco.', priority:'media', active:true },
+    { id:'ev-8', title:'Plants Play Orchestra Live', location:'Parco La Macchiarella (San Cesareo, RM)', type:'concert', startDate:'2026-06-05', endDate:'2026-06-05', plannedDate:'2026-06-05', notes:'Ore 18 (concerto in cuffia ore 19). Gratuito con prenotazione.', priority:'media', active:true },
+    { id:'ev-9', title:'"L\u2019Incanto" (Mostra immersiva)', location:'Mattatoio, Teatro 1 della Pelanda (Testaccio)', type:'exhibition', startDate:'2026-06-05', endDate:'2026-06-18', plannedDate:null, notes:'Installazione cross-mediale sul sottobosco. Gratuito.', priority:'media', active:true },
+    { id:'ev-10', title:'Inaugurazione "Immenso Spermatozoo Sottomarino"', location:"Fondazione D\u2019ARC (Trastevere)", type:'performance', startDate:'2026-06-14', endDate:'2026-06-14', plannedDate:'2026-06-14', notes:'Apertura al pubblico della mostra di G. Silli.', priority:'alta', active:true },
+    { id:'ev-11', title:'Polysonica 2026 (Festival 4 notti)', location:"Convento di Sant'Antonio Abate (Palestrina, RM)", type:'concert', startDate:'2026-06-25', endDate:'2026-06-28', plannedDate:null, notes:'Musica elettronica di ricerca. Giardino Sonoro gratis dalle 18. Concerti su DICE.', priority:'alta', active:true },
+    { id:'ev-12', title:'Videocittà 2026 \u2013 Watercult', location:'Ex Gazometro (Ostiense)', type:'exhibition', startDate:'2026-07-10', endDate:'2026-07-12', plannedDate:null, notes:'Arti digitali, installazioni visive e live audio-video immersivi.', priority:'alta', active:true },
+    { id:'ev-13', title:'Ultra Club: Game Day', location:'Mattatoio (Testaccio)', type:'performance', startDate:'2026-09-27', endDate:'2026-09-27', plannedDate:'2026-09-27', notes:'Videogame e arti performative. Talk, performance e workshop.', priority:'media', active:true },
+    { id:'ev-14', title:'Blade Runner in Cine-concert', location:'Auditorium Parco della Musica', type:'concert', startDate:'2026-11-08', endDate:'2026-11-08', plannedDate:'2026-11-08', notes:'Film in HD + colonna sonora di Vangelis dal vivo (The Avex Ensemble).', priority:'alta', active:true },
+    { id:'ev-15', title:'Marinella Senatore: protagonista 2026', location:'GNAM (Viale delle Belle Arti 131)', type:'exhibition', startDate:'2026-05-25', endDate:'2026-12-31', plannedDate:null, notes:'Focus annuale, installazioni luminose e sculture. Mar-Dom 9-19.', priority:'media', active:true },
+    { id:'ev-16', title:'Studio Azzurro: "Da vicino nessuno è normale"', location:'Museo Laboratorio della Mente (Santa Maria della Pietà)', type:'wishlist', startDate:'', endDate:'', plannedDate:null, notes:'Ore 9-17 (Mar-Sab). Mostra narrativa sulla storia del manicomio.', priority:'media', active:true },
+    { id:'ev-17', title:'"Hidden Noise: Sonitus Occulti"', location:'Villa Lontana (Via Cassia 105)', type:'wishlist', startDate:'', endDate:'', plannedDate:null, notes:"Ricerca sonora con archivio Fluxus (Arcangel/Lindwall).", priority:'bassa', active:true }
+  ],
+  currentDate: new Date(2026,4,25),
+  viewMode: 'calendar',
+  searchQuery: '',
+  categoryFilters: new Set(['exhibition','concert','performance','wishlist']),
+  statusFilter: 'all',
+  sortBy: 'date',
+  selectedIds: new Set(),
+  darkMode: false,
+  googleSheetUrl: DEFAULT_GOOGLE_SHEET_URL,
+  lastSyncAt: null,
+
+  categories: {
+    exhibition:  { label:'Mostra',                     short:'Mostra',      icon:'🎨', color:'#7C4B78', text:'#FFFFFF' },
+    concert:     { label:'Concerto / Live',             short:'Live',        icon:'🎵', color:'#A83636', text:'#FFFFFF' },
+    performance: { label:'Performance / Spettacolo',    short:'Performance', icon:'🎭', color:'#256F6B', text:'#FFFFFF' },
+    wishlist:    { label:'Location da visitare',        short:'Location',    icon:'📍', color:'#C0902E', text:'#231F19' }
+  },
+
+  notify(text, type='success'){
+    const container = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    const palette = { success:'#2F6B4F', error:'#7A2E2E', warning:'#9C6B1F', info:'#3A5A78' };
+    toast.className = 'pointer-events-auto flex items-center gap-2 px-4 py-3 rounded-xl text-xs font-semibold transition-all duration-300 transform translate-y-2 opacity-0';
+    toast.style.background = 'var(--card)'; toast.style.border = `1px solid ${palette[type]}55`; toast.style.color = palette[type]; toast.style.boxShadow='var(--shadow)';
+    const icon = type==='success' ? 'fa-circle-check' : type==='error' ? 'fa-circle-exclamation' : type==='warning' ? 'fa-triangle-exclamation' : 'fa-circle-info';
+    toast.innerHTML = `<i class="fa-solid ${icon}"></i><span>${text}</span>`;
+    container.appendChild(toast);
+    setTimeout(()=>toast.classList.remove('translate-y-2','opacity-0'), 10);
+    setTimeout(()=>{ toast.classList.add('opacity-0','translate-y-2'); setTimeout(()=>toast.remove(), 300); }, 4200);
+  },
+
+  saveData(){
+    localStorage.setItem('art_planner_v2', JSON.stringify({ events:this.events, darkMode:this.darkMode, categories:this.categories, googleSheetUrl:this.googleSheetUrl, lastSyncAt:this.lastSyncAt }));
+  },
+  loadData(){
+    const saved = localStorage.getItem('art_planner_v2');
+    if(saved){
+      try{
+        const data = JSON.parse(saved);
+        if(Array.isArray(data.events)) this.events = data.events;
+        if(typeof data.darkMode === 'boolean') this.darkMode = data.darkMode;
+        if(data.categories && typeof data.categories === 'object') this.categories = data.categories;
+        if(typeof data.googleSheetUrl === 'string' && data.googleSheetUrl) this.googleSheetUrl = data.googleSheetUrl;
+        if(data.lastSyncAt) this.lastSyncAt = data.lastSyncAt;
+      }catch(e){ console.error('Errore caricamento dati locali', e); }
+      this.categoryFilters = new Set(Object.keys(this.categories));
+    }
+  }
+};
+
+const CATEGORY_PRESETS = [
+  {color:'#7C4B78', text:'#FFFFFF'}, {color:'#A83636', text:'#FFFFFF'},
+  {color:'#256F6B', text:'#FFFFFF'}, {color:'#C0902E', text:'#231F19'},
+  {color:'#3A5A78', text:'#FFFFFF'}, {color:'#5C7A3A', text:'#FFFFFF'},
+  {color:'#8A5A2E', text:'#FFFFFF'}, {color:'#635C86', text:'#FFFFFF'}
+];
+let selectedNewCatPreset = 0;
+</script>
+
+<script>
+/* ---------- Init & theme ---------- */
+function applyTheme(){
+  document.documentElement.setAttribute('data-theme', AppState.darkMode ? 'dark' : 'light');
+  const btn = document.getElementById('theme-toggle-btn');
+  btn.innerHTML = AppState.darkMode ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+}
+function toggleDarkMode(){
+  AppState.darkMode = !AppState.darkMode;
+  applyTheme();
+  AppState.saveData();
+}
+
+function catOf(type){ return AppState.categories[type] || Object.values(AppState.categories)[0]; }
+function catBadge(type, size='xs'){
+  const cat = catOf(type);
+  const pad = size==='xs' ? 'px-2 py-0.5 text-[10.5px]' : 'px-2.5 py-1 text-xs';
+  return `<span class="${pad} rounded-md font-bold inline-flex items-center gap-1" style="background:color-mix(in srgb, ${cat.color} 18%, var(--card)); color:${cat.color}; border:1px solid color-mix(in srgb, ${cat.color} 45%, transparent)">${cat.icon} ${cat.short}</span>`;
+}
+
+function renderCategoryChips(){
+  const container = document.getElementById('category-chips');
+  container.innerHTML = Object.entries(AppState.categories).map(([key, cat])=>{
+    const isActive = AppState.categoryFilters.has(key);
+    const style = isActive ? `background:${cat.color}; border-color:${cat.color}; color:${cat.text}` : `border-color:${cat.color}88; color:${cat.color}`;
+    return `<button onclick="toggleCategoryFilter('${key}')" class="chip px-3 py-1.5 rounded-full text-xs" style="${style}">${cat.icon} ${cat.short}</button>`;
+  }).join('');
+  renderLegend();
+}
+function renderLegend(){
+  const el = document.getElementById('legend-row');
+  if(!el) return;
+  el.innerHTML = Object.values(AppState.categories).map(cat =>
+    `<span class="flex items-center gap-1.5 text-[10.5px] font-semibold ink-soft"><span class="legend-dot" style="background:${cat.color}"></span>${cat.short}</span>`
+  ).join('');
+}
+function toggleCategoryFilter(key){
+  if(AppState.categoryFilters.has(key)) AppState.categoryFilters.delete(key); else AppState.categoryFilters.add(key);
+  renderCategoryChips();
+  renderApp();
+}
+function onSearchInput(){
+  AppState.searchQuery = document.getElementById('search-input').value.trim().toLowerCase();
+  renderApp();
+}
+function onStatusFilterChange(){ AppState.statusFilter = document.getElementById('status-filter').value; renderApp(); }
+function onSortChange(){ AppState.sortBy = document.getElementById('sort-select').value; renderApp(); }
+
+function matchesFilters(ev){
+  if(!AppState.categoryFilters.has(ev.type)) return false;
+  if(AppState.statusFilter === 'active' && !ev.active) return false;
+  if(AppState.statusFilter === 'inactive' && ev.active) return false;
+  if(AppState.searchQuery){
+    const hay = `${ev.title} ${ev.location}`.toLowerCase();
+    if(!hay.includes(AppState.searchQuery)) return false;
+  }
+  return true;
+}
+function getFilteredEvents({ activeOnly=false } = {}){
+  return AppState.events.filter(ev => matchesFilters(ev) && (!activeOnly || ev.active));
+}
+const PRIORITY_RANK = { alta:0, media:1, bassa:2 };
+function sortEvents(list){
+  const arr = list.slice();
+  if(AppState.sortBy === 'title') arr.sort((a,b)=>a.title.localeCompare(b.title));
+  else if(AppState.sortBy === 'priority') arr.sort((a,b)=>(PRIORITY_RANK[a.priority]??1)-(PRIORITY_RANK[b.priority]??1));
+  else if(AppState.sortBy === 'category') arr.sort((a,b)=>a.type.localeCompare(b.type));
+  else arr.sort((a,b)=>(a.plannedDate||a.startDate||'9999').localeCompare(b.plannedDate||b.startDate||'9999'));
+  return arr;
+}
+
+function renderApp(){
+  renderCategoryChips();
+  renderSidebarList();
+  renderMainView();
+  updateFooterStats();
+  updateConflictBadge();
+  updateNextEventBanner();
+  document.getElementById('month-nav').style.display = (AppState.viewMode==='list') ? 'none' : 'flex';
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  AppState.loadData();
+  applyTheme();
+  populateTypeSelect();
+  setViewMode('calendar');
+  if(AppState.googleSheetUrl){
+    syncFromCloud(true);
+  }
+});
+
+function populateTypeSelect(){
+  const sel = document.getElementById('ev-type');
+  sel.innerHTML = Object.entries(AppState.categories).map(([key,c])=>`<option value="${key}">${c.icon} ${c.label}</option>`).join('');
+}
+</script>
+
+<script>
+/* ---------- Categories management ---------- */
+function openCategoriesModal(){
+  renderCategoriesList();
+  document.getElementById('new-cat-emoji').value = '';
+  document.getElementById('new-cat-label').value = '';
+  selectedNewCatPreset = 0;
+  renderNewCatSwatches();
+  document.getElementById('categories-modal').classList.remove('hidden');
+}
+function closeCategoriesModal(){ document.getElementById('categories-modal').classList.add('hidden'); }
+function renderCategoriesList(){
+  const container = document.getElementById('categories-list');
+  container.innerHTML = Object.entries(AppState.categories).map(([key, cat]) => `
+    <div class="flex items-center gap-2 p-2 rounded-lg border hairline">
+      <div class="w-8 h-8 rounded-lg flex items-center justify-center text-sm flex-shrink-0" style="background:${cat.color}; color:${cat.text}">${cat.icon}</div>
+      <input value="${cat.label}" onchange="renameCategory('${key}', this.value)" class="flex-1 px-2 py-1.5 rounded-md text-sm">
+      <span class="text-[10px] ink-mute">${AppState.events.filter(e=>e.type===key).length} eventi</span>
+      <button onclick="deleteCategoryWithConfirm('${key}')" class="w-8 h-8 rounded-md hover:opacity-70 flex items-center justify-center" style="color:var(--accent)"><i class="fa-solid fa-trash-can"></i></button>
+    </div>`).join('');
+}
+function renameCategory(key, newLabel){
+  newLabel = newLabel.trim();
+  if(!newLabel) return;
+  AppState.categories[key].label = newLabel;
+  AppState.categories[key].short = newLabel.length > 12 ? newLabel.slice(0,11)+'…' : newLabel;
+  AppState.saveData();
+  populateTypeSelect();
+  renderApp();
+  AppState.notify('Categoria aggiornata.', 'success');
+}
+function deleteCategoryWithConfirm(key){
+  if(Object.keys(AppState.categories).length <= 1){ AppState.notify('Deve restare almeno una categoria.', 'warning'); return; }
+  const count = AppState.events.filter(e=>e.type===key).length;
+  showCustomConfirm(count>0 ? `${count} eventi usano questa categoria e verranno spostati in "${Object.values(AppState.categories)[0].label}". Continuare?` : 'Eliminare questa categoria?', () => {
+    const fallback = Object.keys(AppState.categories).find(k => k !== key);
+    AppState.events.forEach(e => { if(e.type === key) e.type = fallback; });
+    delete AppState.categories[key];
+    AppState.categoryFilters.delete(key);
+    AppState.saveData();
+    populateTypeSelect();
+    closeCategoriesModal();
+    renderApp();
+    AppState.notify('Categoria eliminata.', 'info');
+  });
+}
+function renderNewCatSwatches(){
+  const el = document.getElementById('new-cat-swatches');
+  el.innerHTML = CATEGORY_PRESETS.map((p, i) =>
+    `<div class="cat-swatch ${i===selectedNewCatPreset?'selected':''}" style="background:${p.color}" onclick="selectedNewCatPreset=${i}; renderNewCatSwatches();"></div>`
+  ).join('');
+}
+function addNewCategory(){
+  const emoji = document.getElementById('new-cat-emoji').value.trim() || '🏷️';
+  const label = document.getElementById('new-cat-label').value.trim();
+  if(!label){ AppState.notify('Dai un nome alla categoria.', 'error'); return; }
+  const key = 'cat_' + Date.now();
+  const preset = CATEGORY_PRESETS[selectedNewCatPreset];
+  AppState.categories[key] = { label, short: label.length>12?label.slice(0,11)+'…':label, icon:emoji, color:preset.color, text:preset.text };
+  AppState.categoryFilters.add(key);
+  AppState.saveData();
+  populateTypeSelect();
+  renderCategoriesList();
+  document.getElementById('new-cat-emoji').value = '';
+  document.getElementById('new-cat-label').value = '';
+  renderApp();
+  AppState.notify('Categoria aggiunta.', 'success');
+}
+</script>
+
+<script>
+/* ---------- Next event countdown ---------- */
+function updateNextEventBanner(){
+  const banner = document.getElementById('next-event-banner');
+  const today = todayISO();
+  const upcoming = AppState.events
+    .filter(e => e.active && (e.plannedDate || e.startDate) && (e.plannedDate || e.startDate) >= today)
+    .sort((a,b) => (a.plannedDate||a.startDate).localeCompare(b.plannedDate||b.startDate));
+  if(upcoming.length === 0){ banner.classList.add('hidden'); banner.classList.remove('flex'); return; }
+  const next = upcoming[0];
+  const d = next.plannedDate || next.startDate;
+  const days = Math.round((parseISO(d) - parseISO(today)) / 86400000);
+  const when = days === 0 ? 'oggi' : days === 1 ? 'domani' : `tra ${days} giorni`;
+  document.getElementById('next-event-text').textContent = `Prossimo: ${next.title} — ${when}`;
+  banner.classList.remove('hidden'); banner.classList.add('flex');
+}
+</script>
+
+<script>
+/* ---------- Confirm modal helper ---------- */
+function showCustomConfirm(message, onConfirm){
+  const modal = document.getElementById('confirm-modal');
+  document.getElementById('confirm-modal-text').textContent = message;
+  const btn = document.getElementById('confirm-modal-btn');
+  const clone = btn.cloneNode(true);
+  btn.parentNode.replaceChild(clone, btn);
+  clone.addEventListener('click', () => { onConfirm(); closeConfirmModal(); });
+  modal.classList.remove('hidden');
+}
+function closeConfirmModal(){ document.getElementById('confirm-modal').classList.add('hidden'); }
+
+function clearAllEventsWithConfirm(){
+  showCustomConfirm('Vuoi cancellare tutta la bacheca? Ti consigliamo di scaricare prima un backup.', () => {
+    AppState.events = [];
+    AppState.saveData();
+    renderApp();
+    AppState.notify('Bacheca svuotata.', 'info');
+  });
+}
+</script>
+
+<script>
+/* ---------- Event CRUD & modal ---------- */
+function toggleFormActiveSwitch(){
+  const el = document.getElementById('ev-active-switch');
+  el.classList.toggle('on');
+}
+function openAddEventModal(prefillDate){
+  document.getElementById('event-modal-title').textContent = 'Nuovo elemento';
+  document.getElementById('ev-id').value = '';
+  document.getElementById('ev-title').value = '';
+  document.getElementById('ev-location').value = '';
+  document.getElementById('ev-type').value = 'exhibition';
+  document.getElementById('ev-priority').value = 'media';
+  document.getElementById('ev-start').value = prefillDate || '';
+  document.getElementById('ev-end').value = prefillDate || '';
+  document.getElementById('ev-planned').value = prefillDate || '';
+  document.getElementById('ev-notes').value = '';
+  document.getElementById('ev-active-switch').classList.add('on');
+  document.getElementById('ev-delete-btn').classList.add('hidden');
+  document.getElementById('event-modal').classList.remove('hidden');
+}
+function openEditEventModal(id){
+  const ev = AppState.events.find(e => e.id === id);
+  if(!ev) return;
+  document.getElementById('event-modal-title').textContent = 'Modifica elemento';
+  document.getElementById('ev-id').value = ev.id;
+  document.getElementById('ev-title').value = ev.title;
+  document.getElementById('ev-location').value = ev.location || '';
+  document.getElementById('ev-type').value = ev.type;
+  document.getElementById('ev-priority').value = ev.priority || 'media';
+  document.getElementById('ev-start').value = ev.startDate || '';
+  document.getElementById('ev-end').value = ev.endDate || '';
+  document.getElementById('ev-planned').value = ev.plannedDate || '';
+  document.getElementById('ev-notes').value = ev.notes || '';
+  const sw = document.getElementById('ev-active-switch');
+  ev.active ? sw.classList.add('on') : sw.classList.remove('on');
+  document.getElementById('ev-delete-btn').classList.remove('hidden');
+  document.getElementById('event-modal').classList.remove('hidden');
+}
+function closeEventModal(){ document.getElementById('event-modal').classList.add('hidden'); }
+
+function saveEventForm(){
+  const title = document.getElementById('ev-title').value.trim();
+  if(!title){ AppState.notify('Il titolo è obbligatorio.', 'error'); return; }
+  const id = document.getElementById('ev-id').value;
+  let startDate = document.getElementById('ev-start').value;
+  let endDate = document.getElementById('ev-end').value;
+  let plannedDate = document.getElementById('ev-planned').value || null;
+  if(startDate && !endDate) endDate = startDate;
+  if(!startDate && endDate) startDate = endDate;
+  const active = document.getElementById('ev-active-switch').classList.contains('on');
+  if(!plannedDate && startDate && startDate === endDate) plannedDate = startDate;
+
+  const payload = {
+    title, location: document.getElementById('ev-location').value.trim() || 'Non specificato',
+    type: document.getElementById('ev-type').value,
+    priority: document.getElementById('ev-priority').value,
+    startDate, endDate, plannedDate,
+    notes: document.getElementById('ev-notes').value.trim(),
+    active
+  };
+
+  if(id){
+    const idx = AppState.events.findIndex(e => e.id === id);
+    if(idx > -1) AppState.events[idx] = { ...AppState.events[idx], ...payload };
+    AppState.notify('Elemento aggiornato.', 'success');
+  }else{
+    payload.id = 'ev-' + Date.now();
+    AppState.events.push(payload);
+    AppState.notify('Elemento aggiunto alla bacheca.', 'success');
+  }
+  AppState.saveData();
+  closeEventModal();
+  renderApp();
+}
+function deleteEventFromForm(){
+  const id = document.getElementById('ev-id').value;
+  if(!id) return;
+  showCustomConfirm('Eliminare definitivamente questo elemento?', () => {
+    AppState.events = AppState.events.filter(e => e.id !== id);
+    AppState.saveData();
+    closeEventModal();
+    renderApp();
+    AppState.notify('Elemento eliminato.', 'info');
+  });
+}
+function deleteEventQuick(id){
+  const ev = AppState.events.find(e => e.id === id);
+  if(!ev) return;
+  showCustomConfirm(`Eliminare "${ev.title}"?`, () => {
+    AppState.events = AppState.events.filter(e => e.id !== id);
+    AppState.saveData();
+    renderApp();
+    AppState.notify('Elemento eliminato.', 'info');
+  });
+}
+function toggleEventActive(id){
+  const ev = AppState.events.find(e => e.id === id);
+  if(!ev) return;
+  ev.active = !ev.active;
+  AppState.saveData();
+  renderApp();
+  AppState.notify(ev.active ? `"${ev.title}" attivato in agenda.` : `"${ev.title}" nascosto dall'agenda.`, ev.active ? 'success' : 'info');
+}
+</script>
+
+<script>
+/* ---------- Selection / bulk actions ---------- */
+function toggleSelect(id, checked){
+  if(checked) AppState.selectedIds.add(id); else AppState.selectedIds.delete(id);
+  renderBulkBar();
+}
+function clearSelection(){ AppState.selectedIds.clear(); renderSidebarList(); renderBulkBar(); }
+function renderBulkBar(){
+  const bar = document.getElementById('bulk-bar');
+  const n = AppState.selectedIds.size;
+  document.getElementById('bulk-count').textContent = n;
+  bar.classList.toggle('hidden', n === 0);
+  bar.classList.toggle('flex', n > 0);
+}
+function bulkSetActive(val){
+  AppState.events.forEach(ev => { if(AppState.selectedIds.has(ev.id)) ev.active = val; });
+  AppState.saveData();
+  clearSelection();
+  renderApp();
+  AppState.notify(val ? 'Elementi attivati.' : 'Elementi disattivati.', 'success');
+}
+function bulkDelete(){
+  showCustomConfirm(`Eliminare ${AppState.selectedIds.size} elementi selezionati?`, () => {
+    AppState.events = AppState.events.filter(e => !AppState.selectedIds.has(e.id));
+    AppState.saveData();
+    clearSelection();
+    renderApp();
+    AppState.notify('Elementi eliminati.', 'info');
+  });
+}
+</script>
+
+<script>
+/* ---------- Sidebar list ---------- */
+function renderSidebarList(){
+  const container = document.getElementById('event-list-container');
+  const items = sortEvents(getFilteredEvents());
+  const mobileCountEl = document.getElementById('mobile-filtered-count');
+  if(mobileCountEl) mobileCountEl.textContent = items.length;
+
+  if(items.length === 0){
+    container.innerHTML = `
+      <div class="flex flex-col items-center text-center p-8 border-2 border-dashed hairline rounded-xl">
+        <div class="text-3xl ink-mute mb-2">📥</div>
+        <h4 class="font-bold text-sm">Nessun elemento</h4>
+        <p class="text-xs ink-mute mt-1">Prova ad allargare i filtri o crea un nuovo elemento.</p>
+      </div>`;
+    return;
+  }
+
+  container.innerHTML = items.map(ev => {
+    const cat = catOf(ev.type);
+    const hasDates = !!ev.startDate;
+    const dateDisplay = hasDates ? (ev.startDate === ev.endDate ? formatDateString(ev.startDate) : `${formatDateString(ev.startDate)} – ${formatDateString(ev.endDate)}`) : 'Senza data';
+    const plannedTag = ev.plannedDate ? `<span class="font-bold" style="color:var(--gold)">🌟 ${formatDateString(ev.plannedDate)}</span>` : '';
+    const priorityColor = ev.priority === 'alta' ? 'var(--accent)' : ev.priority === 'media' ? 'var(--gold)' : 'var(--ink-mute)';
+    const checked = AppState.selectedIds.has(ev.id) ? 'checked' : '';
+    return `
+      <div class="rounded-xl p-3 border-l-[5px] border transition-all ${ev.active ? 'hairline' : 'opacity-50'}" style="border-left-color:${cat.color}; border-top-color:var(--line); border-right-color:var(--line); border-bottom-color:var(--line); background:var(--card)">
+        <div class="flex items-start gap-2.5">
+          <input type="checkbox" ${checked} onchange="toggleSelect('${ev.id}', this.checked)" class="mt-1.5 flex-shrink-0 w-4 h-4">
+          <div class="flex-1 min-w-0 cursor-pointer" onclick="openEditEventModal('${ev.id}')">
+            <div class="flex items-center gap-1.5 flex-wrap mb-1.5">
+              <span class="text-[10px] font-bold" style="color:${priorityColor}">● ${ev.priority.toUpperCase()}</span>
+              ${catBadge(ev.type)}
+            </div>
+            <h4 class="font-bold text-sm leading-snug">${ev.title}</h4>
+            <p class="text-xs ink-mute mt-1 flex items-center gap-1.5"><i class="fa-solid fa-map-pin"></i> ${ev.location}</p>
+            <p class="text-xs ink-soft mt-1 flex items-center gap-1.5 flex-wrap"><i class="fa-solid fa-calendar"></i> ${dateDisplay} ${plannedTag}</p>
+          </div>
+          <div class="flex flex-col items-end gap-2 flex-shrink-0">
+            <div class="switch ${ev.active?'on':''} cursor-pointer" onclick="toggleEventActive('${ev.id}')" title="Mostra in agenda"></div>
+            <button onclick="deleteEventQuick('${ev.id}')" class="w-7 h-7 rounded-md hover:opacity-70 flex items-center justify-center text-sm" style="color:var(--accent)"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+  renderBulkBar();
+}
+</script>
+
+<script>
+/* ---------- View switching ---------- */
+function setViewMode(mode){
+  AppState.viewMode = mode;
+  ['calendar','timeline','list'].forEach(m => document.getElementById('tab-'+m).classList.toggle('active', m===mode));
+  renderApp();
+}
+function changeMonth(delta){
+  AppState.currentDate.setMonth(AppState.currentDate.getMonth() + delta);
+  renderMainView();
+  updateHeaderDateTitle();
+}
+function goToCurrentDate(){
+  AppState.currentDate = new Date();
+  renderMainView();
+  updateHeaderDateTitle();
+}
+function updateHeaderDateTitle(){
+  const el = document.getElementById('calendar-month-title');
+  if(AppState.viewMode === 'list'){ el.textContent = 'Tutti gli eventi'; return; }
+  el.textContent = `${MONTHS_IT[AppState.currentDate.getMonth()]} ${AppState.currentDate.getFullYear()}`;
+}
+function renderMainView(){
+  updateHeaderDateTitle();
+  const area = document.getElementById('main-view-area');
+  if(AppState.viewMode === 'calendar') renderMonthlyCalendar(area);
+  else if(AppState.viewMode === 'timeline') renderTimelineGantt(area);
+  else renderListView(area);
+}
+</script>
+
+<script>
+/* ---------- Calendar view ---------- */
+function getEventsForDay(dateStr, events){
+  return events.filter(ev => {
+    if(ev.plannedDate) return ev.plannedDate === dateStr;
+    if(!ev.startDate) return false;
+    return dateStr >= ev.startDate && dateStr <= ev.endDate;
+  });
+}
+function renderMonthlyCalendar(container){
+  const year = AppState.currentDate.getFullYear();
+  const month = AppState.currentDate.getMonth();
+  const totalDays = daysInMonth(year, month);
+  const firstDay = new Date(year, month, 1).getDay();
+  const adjustedFirstDay = firstDay === 0 ? 6 : firstDay - 1;
+  const events = getFilteredEvents({ activeOnly:true });
+
+  let html = `<div class="card rounded-2xl overflow-hidden h-full flex flex-col">
+    <div class="grid grid-cols-7 border-b hairline flex-shrink-0" style="background:var(--paper-soft)">
+      ${WEEKDAYS_IT.map(w => `<div class="text-center py-2.5 text-xs font-bold ink-mute uppercase tracking-wide">${w}</div>`).join('')}
+    </div>
+    <div class="grid grid-cols-7 flex-1">`;
+
+  for(let i=0;i<adjustedFirstDay;i++) html += `<div class="day-cell border-b border-r hairline" style="background:var(--paper-soft)"></div>`;
+
+  for(let d=1; d<=totalDays; d++){
+    const dateStr = `${year}-${pad2(month+1)}-${pad2(d)}`;
+    const isToday = dateStr === todayISO();
+    const dayEvents = getEventsForDay(dateStr, events);
+    const maxShow = window.innerWidth < 640 ? 2 : 4;
+    const shown = dayEvents.slice(0, maxShow);
+    const extra = dayEvents.length - shown.length;
+
+    html += `<div class="day-cell border-b border-r hairline p-2 relative group flex flex-col gap-1">
+      <div class="flex items-center justify-between">
+        <span class="text-sm font-bold ${isToday ? 'w-6 h-6 rounded-full flex items-center justify-center' : 'ink-soft'}" ${isToday ? `style="background:var(--accent); color:var(--accent-ink)"` : ''}>${d}</span>
+        <button onclick="openAddEventModal('${dateStr}')" class="opacity-0 group-hover:opacity-100 w-5 h-5 rounded flex items-center justify-center text-[10px] btn-ghost transition-opacity"><i class="fa-solid fa-plus"></i></button>
+      </div>
+      <div class="space-y-1 overflow-hidden">
+        ${shown.map(ev => { const cat = catOf(ev.type); return `<div onclick="openEditEventModal('${ev.id}')" class="event-pill px-1.5 py-1 rounded-md cursor-pointer truncate" style="background:${cat.color}; color:${cat.text}" title="${ev.title} — ${ev.location}">${cat.icon} ${ev.title}</div>`; }).join('')}
+        ${extra > 0 ? `<div class="text-[10.5px] ink-mute font-bold pl-1">+${extra} altri</div>` : ''}
+      </div>
+    </div>`;
+  }
+
+  const totalCells = adjustedFirstDay + totalDays;
+  const remainder = totalCells % 7;
+  if(remainder !== 0) for(let i=0;i<7-remainder;i++) html += `<div class="day-cell border-b border-r hairline" style="background:var(--paper-soft)"></div>`;
+
+  html += `</div></div>`;
+  container.innerHTML = html;
+}
+</script>
+
+<script>
+/* ---------- Timeline (Gantt) view ---------- */
+function renderTimelineGantt(container){
+  const year = AppState.currentDate.getFullYear();
+  const month = AppState.currentDate.getMonth();
+  const total = daysInMonth(year, month);
+  const events = getFilteredEvents({ activeOnly:true }).filter(ev => ev.startDate);
+
+  if(events.length === 0){
+    container.innerHTML = `<div class="card rounded-2xl p-10 text-center space-y-2">
+      <div class="text-3xl">📊</div>
+      <h3 class="font-display font-semibold text-base">Nessun evento con data in questo mese</h3>
+      <p class="text-xs ink-mute max-w-sm mx-auto">Attiva o crea eventi con date per vederli in timeline.</p>
+    </div>`;
+    return;
+  }
+
+  let headerCols = '';
+  for(let d=1; d<=total; d++){
+    const isToday = `${year}-${pad2(month+1)}-${pad2(d)}` === todayISO();
+    headerCols += `<div class="gantt-cell text-center py-2.5 border-r hairline flex-1 text-xs font-bold ${isToday ? '' : 'ink-mute'}" ${isToday?`style="background:var(--accent-soft); color:var(--accent)"`:''}>${d}</div>`;
+  }
+
+  let rows = '';
+  events.forEach(ev => {
+    const cat = catOf(ev.type);
+    let bar = '';
+    for(let d=1; d<=total; d++){
+      const dateStr = `${year}-${pad2(month+1)}-${pad2(d)}`;
+      const inRange = dateStr >= ev.startDate && dateStr <= ev.endDate;
+      const isPlanned = ev.plannedDate === dateStr;
+      let style = '';
+      let content = '';
+      if(isPlanned){ style = `background:${cat.color}; color:${cat.text}; cursor:pointer;`; content = '★'; }
+      else if(inRange && ev.plannedDate){ style = `background:var(--paper-soft); opacity:.4;`; }
+      else if(inRange){ style = `background:color-mix(in srgb, ${cat.color} 30%, var(--card)); color:${cat.color}; cursor:pointer;`; }
+      bar += `<div onclick="timelineCellClick('${ev.id}','${dateStr}',${inRange})" class="gantt-cell flex items-center justify-center border-r hairline flex-1 h-11 text-xs font-bold" style="${style}">${content}</div>`;
+    }
+    rows += `<div class="flex border-b hairline items-stretch">
+      <div class="w-64 p-3 border-r hairline flex-shrink-0 bg-card sticky left-0 z-[2]">
+        <h4 class="font-bold text-sm truncate">${cat.icon} ${ev.title}</h4>
+        <p class="text-xs ink-mute truncate mt-0.5">${ev.location}</p>
+        <p class="text-[11px] mt-1 font-bold" style="color:${ev.plannedDate ? 'var(--gold)' : 'var(--ink-mute)'}">${ev.plannedDate ? '🌟 Visita: '+formatDateString(ev.plannedDate) : 'Clicca un giorno per fissare la visita'}</p>
+      </div>
+      <div class="flex-1 flex">${bar}</div>
+    </div>`;
+  });
+
+  container.innerHTML = `<div class="card rounded-2xl overflow-hidden">
+    <div class="overflow-auto max-h-[70vh]">
+      <div class="flex border-b hairline gantt-header-row" style="background:var(--paper-soft)">
+        <div class="w-64 p-3 border-r hairline flex-shrink-0 text-xs font-bold ink-mute sticky left-0 z-[6]" style="background:var(--paper-soft)">Elementi attivi</div>
+        <div class="flex-1 flex min-w-0">${headerCols}</div>
+      </div>
+      <div>${rows}</div>
+    </div>
+  </div>`;
+}
+function timelineCellClick(id, dateStr, inRange){
+  if(!inRange) return;
+  const ev = AppState.events.find(e => e.id === id);
+  if(!ev) return;
+  ev.plannedDate = (ev.plannedDate === dateStr) ? null : dateStr;
+  AppState.saveData();
+  renderApp();
+  AppState.notify(ev.plannedDate ? `Visita fissata: ${formatDateString(ev.plannedDate)}` : 'Data di visita rimossa.', 'success');
+}
+</script>
+
+<script>
+/* ---------- List view ---------- */
+function renderListView(container){
+  const items = sortEvents(getFilteredEvents());
+  if(items.length === 0){
+    container.innerHTML = `<div class="card rounded-2xl p-10 text-center"><p class="text-sm ink-mute">Nessun elemento corrisponde ai filtri.</p></div>`;
+    return;
+  }
+  const dated = items.filter(e => e.startDate && isValidISODate(e.plannedDate || e.startDate));
+  const undated = items.filter(e => !e.startDate || !isValidISODate(e.plannedDate || e.startDate));
+
+  const groups = {}; const order = [];
+  dated.forEach(ev => {
+    const d = parseISO(ev.plannedDate || ev.startDate);
+    const key = `${MONTHS_IT[d.getMonth()]} ${d.getFullYear()}`;
+    if(!groups[key]){ groups[key] = []; order.push(key); }
+    groups[key].push(ev);
+  });
+
+  let html = '';
+  order.forEach(label => {
+    html += `<div class="mb-6">
+      <h3 class="font-display text-lg font-semibold mb-3 ink-soft">${label}</h3>
+      <div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">${groups[label].map(renderListCard).join('')}</div>
+    </div>`;
+  });
+  if(undated.length){
+    html += `<div class="mb-6">
+      <h3 class="font-display text-lg font-semibold mb-3 ink-soft">Senza data — wishlist</h3>
+      <div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">${undated.map(renderListCard).join('')}</div>
+    </div>`;
+  }
+  container.innerHTML = html;
+}
+function renderListCard(ev){
+  const cat = catOf(ev.type);
+  const hasDates = !!ev.startDate;
+  const dateDisplay = hasDates ? (ev.startDate===ev.endDate ? formatDateString(ev.startDate) : `${formatDateString(ev.startDate)} – ${formatDateString(ev.endDate)}`) : 'Senza data';
+  return `<div onclick="openEditEventModal('${ev.id}')" class="card rounded-xl p-4 cursor-pointer transition-all border-l-[5px] ${ev.active ? '' : 'opacity-50'}" style="border-left-color:${cat.color}">
+    <div class="flex items-center gap-1.5 flex-wrap mb-2">${catBadge(ev.type)}<span class="text-[10px] font-bold ink-mute">${ev.priority.toUpperCase()}</span></div>
+    <h4 class="font-bold text-sm mb-1.5">${ev.title}</h4>
+    <p class="text-xs ink-mute mb-1"><i class="fa-solid fa-map-pin"></i> ${ev.location}</p>
+    <p class="text-xs ink-soft"><i class="fa-solid fa-calendar"></i> ${dateDisplay}${ev.plannedDate ? ` · 🌟 ${formatDateString(ev.plannedDate)}` : ''}</p>
+  </div>`;
+}
+</script>
+
+<script>
+/* ---------- Footer stats & conflicts ---------- */
+function updateFooterStats(){
+  document.getElementById('stat-total').textContent = AppState.events.length;
+  document.getElementById('stat-active').textContent = AppState.events.filter(e => e.active).length;
+  document.getElementById('stat-planned').textContent = AppState.events.filter(e => e.active && e.plannedDate).length;
+}
+function updateConflictBadge(){
+  const tally = {};
+  AppState.events.forEach(ev => {
+    if(!ev.active) return;
+    const d = ev.plannedDate || (ev.startDate === ev.endDate ? ev.startDate : null);
+    if(d) tally[d] = (tally[d]||0) + 1;
+  });
+  const conflicts = Object.values(tally).filter(n => n > 1).length;
+  const badge = document.getElementById('conflict-badge');
+  if(conflicts > 0){
+    badge.classList.remove('hidden'); badge.classList.add('flex');
+    document.getElementById('conflict-count').textContent = `${conflicts} giorni affollati`;
+  }else{
+    badge.classList.add('hidden'); badge.classList.remove('flex');
+  }
+}
+</script>
+
+<script>
+/* ---------- Backup / restore / ICS ---------- */
+function openBackupModal(){
+  document.getElementById('gsheet-url').value = AppState.googleSheetUrl || '';
+  updateCloudStatusText();
+  document.getElementById('backup-modal').classList.remove('hidden');
+}
+function closeBackupModal(){ document.getElementById('backup-modal').classList.add('hidden'); }
+function updateCloudStatusText(){
+  const el = document.getElementById('cloud-status');
+  if(!el) return;
+  el.textContent = AppState.lastSyncAt ? `Ultima sincronizzazione: ${new Date(AppState.lastSyncAt).toLocaleString('it-IT')}` : 'Nessuna sincronizzazione ancora effettuata.';
+}
+function onGSheetUrlChange(){
+  AppState.googleSheetUrl = document.getElementById('gsheet-url').value.trim();
+  AppState.saveData();
+}
+function quickSaveToCloud(){
+  if(!AppState.googleSheetUrl){
+    AppState.notify('Configura prima l\'URL del Google Sheet in "Backup, JSON e .ics".', 'error');
+    openBackupModal();
+    return;
+  }
+  syncToCloud();
+}
+function syncToCloud(){
+  const url = AppState.googleSheetUrl;
+  if(!url){ AppState.notify('Incolla prima l\'URL della Web App.', 'error'); return; }
+  const statusEl = document.getElementById('cloud-status');
+  statusEl.textContent = 'Salvataggio sul Google Sheet in corso...';
+  fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify({ events: AppState.events, categories: AppState.categories })
+  })
+  .then(r => r.json())
+  .then(() => {
+    AppState.lastSyncAt = new Date().toISOString();
+    AppState.saveData();
+    updateCloudStatusText();
+    AppState.notify('Dati salvati sul Google Sheet.', 'success');
+  })
+  .catch(err => {
+    statusEl.textContent = 'Errore durante il salvataggio: ' + err.message;
+    AppState.notify('Impossibile salvare sul cloud. Controlla URL e permessi dello script.', 'error');
+  });
+}
+function sanitizeIncomingEvents(events){
+  return events.map(ev => {
+    const clean = { ...ev };
+    ['startDate','endDate','plannedDate'].forEach(field => {
+      if(clean[field] && !isValidISODate(clean[field])) clean[field] = (field === 'plannedDate') ? null : '';
+    });
+    if(!clean.startDate && !clean.endDate) clean.plannedDate = clean.plannedDate && isValidISODate(clean.plannedDate) ? clean.plannedDate : null;
+    if(!clean.type) clean.type = Object.keys(AppState.categories)[0];
+    if(!clean.priority) clean.priority = 'media';
+    if(typeof clean.active !== 'boolean') clean.active = true;
+    if(!clean.title) clean.title = 'Senza titolo';
+    return clean;
+  });
+}
+function syncFromCloud(silent){
+  const url = AppState.googleSheetUrl;
+  if(!url){ if(!silent) AppState.notify('Incolla prima l\'URL della Web App.', 'error'); return; }
+  const statusEl = document.getElementById('cloud-status');
+  if(statusEl) statusEl.textContent = 'Caricamento dal Google Sheet in corso...';
+  fetch(url)
+  .then(r => r.json())
+  .then(data => {
+    if(Array.isArray(data.events)) AppState.events = sanitizeIncomingEvents(data.events);
+    if(data.categories && Object.keys(data.categories).length) AppState.categories = data.categories;
+    AppState.categoryFilters = new Set(Object.keys(AppState.categories));
+    AppState.lastSyncAt = new Date().toISOString();
+    AppState.saveData();
+    populateTypeSelect();
+    renderApp();
+    updateCloudStatusText();
+    AppState.notify(silent ? 'Dati aggiornati dal cloud.' : 'Dati caricati dal Google Sheet.', silent ? 'info' : 'success');
+  })
+  .catch(err => {
+    if(statusEl) statusEl.textContent = 'Errore durante il caricamento: ' + err.message;
+    if(!silent) AppState.notify('Impossibile caricare dal cloud. Controlla URL e permessi dello script.', 'error');
+    else console.warn('Sincronizzazione automatica non riuscita:', err.message);
+  });
+}
+
+function exportPlannerToFile(){
+  try{
+    const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(AppState.events, null, 2));
+    const a = document.createElement('a');
+    a.setAttribute('href', dataStr);
+    a.setAttribute('download', 'taccuino_eventi_backup.json');
+    a.click();
+    AppState.notify('Backup scaricato.', 'success');
+  }catch(e){ AppState.notify('Impossibile esportare: ' + e.message, 'error'); }
+}
+const LEGACY_TYPE_MAP = { single_event:'performance', location_wishlist:'wishlist' };
+function migrateLegacyTypes(events){
+  return events.map(ev => {
+    const type = LEGACY_TYPE_MAP[ev.type] || ev.type;
+    return { ...ev, type };
+  });
+}
+function importPlannerFromFile(event){
+  const file = event.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try{
+      const imported = JSON.parse(e.target.result);
+      if(Array.isArray(imported)){
+        AppState.events = sanitizeIncomingEvents(migrateLegacyTypes(imported));
+        AppState.saveData();
+        renderApp();
+        AppState.notify(`Backup ripristinato: ${imported.length} eventi.`, 'success');
+        closeBackupModal();
+      }else{
+        AppState.notify('Formato file non supportato.', 'error');
+      }
+    }catch(err){ AppState.notify('Errore nel file: ' + err.message, 'error'); }
+  };
+  reader.readAsText(file);
+}
+function icsEscape(str){ return String(str||'').replace(/[\\,;]/g, m => '\\'+m).replace(/\n/g,'\\n'); }
+function exportICS(){
+  const events = AppState.events.filter(e => e.active);
+  const lines = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Taccuino Eventi//IT'];
+  let count = 0;
+  events.forEach(ev => {
+    const start = ev.plannedDate || ev.startDate;
+    if(!start) return;
+    const end = ev.plannedDate ? ev.plannedDate : (ev.endDate || start);
+    const dtStart = start.replace(/-/g,'');
+    const dtEnd = addDaysISO(end, 1).replace(/-/g,'');
+    lines.push('BEGIN:VEVENT');
+    lines.push(`UID:${ev.id}@taccuino-eventi`);
+    lines.push(`DTSTART;VALUE=DATE:${dtStart}`);
+    lines.push(`DTEND;VALUE=DATE:${dtEnd}`);
+    lines.push(`SUMMARY:${icsEscape(ev.title)}`);
+    if(ev.location) lines.push(`LOCATION:${icsEscape(ev.location)}`);
+    if(ev.notes) lines.push(`DESCRIPTION:${icsEscape(ev.notes)}`);
+    lines.push('END:VEVENT');
+    count++;
+  });
+  lines.push('END:VCALENDAR');
+  if(count === 0){ AppState.notify('Nessun evento con data da esportare.', 'warning'); return; }
+  const blob = new Blob([lines.join('\r\n')], { type:'text/calendar' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'eventi_taccuino.ics'; a.click();
+  URL.revokeObjectURL(url);
+  AppState.notify(`${count} eventi esportati in .ics.`, 'success');
+}
+function icsUnescape(str){ return String(str||'').replace(/\\n/g,'\n').replace(/\\,/g,',').replace(/\\;/g,';').replace(/\\\\/g,'\\'); }
+function parseICSDate(val){
+  const m = String(val||'').match(/^(\d{4})(\d{2})(\d{2})/);
+  return m ? `${m[1]}-${m[2]}-${m[3]}` : null;
+}
+function importICSFile(event){
+  const file = event.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try{
+      const unfolded = e.target.result.replace(/\r\n[ \t]/g,'').replace(/\n[ \t]/g,'');
+      const lines = unfolded.split(/\r\n|\n|\r/);
+      const parsedEvents = [];
+      let cur = null;
+      lines.forEach(line => {
+        if(line.startsWith('BEGIN:VEVENT')){ cur = {}; return; }
+        if(line.startsWith('END:VEVENT')){ if(cur) parsedEvents.push(cur); cur = null; return; }
+        if(!cur) return;
+        const idx = line.indexOf(':');
+        if(idx === -1) return;
+        const key = line.substring(0, idx).split(';')[0].toUpperCase();
+        const value = line.substring(idx+1);
+        if(key === 'SUMMARY') cur.title = icsUnescape(value);
+        else if(key === 'LOCATION') cur.location = icsUnescape(value);
+        else if(key === 'DESCRIPTION') cur.notes = icsUnescape(value);
+        else if(key === 'DTSTART') cur.dtstart = parseICSDate(value);
+        else if(key === 'DTEND') cur.dtend = parseICSDate(value);
+      });
+
+      if(parsedEvents.length === 0){ AppState.notify('Nessun evento trovato nel file .ics.', 'warning'); return; }
+
+      const defaultType = AppState.categories.exhibition ? 'exhibition' : Object.keys(AppState.categories)[0];
+      let imported = 0;
+      parsedEvents.forEach(ev => {
+        if(!ev.title || !ev.dtstart) return;
+        let endDate = ev.dtend || ev.dtstart;
+        if(endDate !== ev.dtstart) endDate = addDaysISO(endDate, -1);
+        AppState.events.push({
+          id: 'ics-' + Date.now() + '-' + Math.floor(Math.random()*10000),
+          title: ev.title,
+          location: ev.location || 'Non specificato',
+          type: defaultType,
+          startDate: ev.dtstart,
+          endDate: endDate,
+          plannedDate: ev.dtstart === endDate ? ev.dtstart : null,
+          notes: ev.notes || '',
+          priority: 'media',
+          active: true
+        });
+        imported++;
+      });
+      AppState.saveData();
+      renderApp();
+      closeBackupModal();
+      AppState.notify(`${imported} eventi importati da .ics (categoria: ${AppState.categories[defaultType].label}). Puoi riclassificarli dalla scheda.`, 'success');
+    }catch(err){ AppState.notify('Errore nella lettura del file .ics: ' + err.message, 'error'); }
+  };
+  reader.readAsText(file);
+}
+</script>
+
+<script>
+/* ---------- Intelligent parser ---------- */
+let parsedTempEvents = [];
+
+function openImportModal(){
+  document.getElementById('import-text').value = '';
+  document.getElementById('parse-preview-container').classList.add('hidden');
+  const btn = document.getElementById('btn-confirm-import');
+  btn.disabled = true; btn.classList.add('opacity-40');
+  parsedTempEvents = [];
+  document.getElementById('import-modal').classList.remove('hidden');
+}
+function closeImportModal(){ document.getElementById('import-modal').classList.add('hidden'); }
+function loadSampleText(){
+  document.getElementById('import-text').value =
+`DAL 10 AL 12 LUGLIO 2026
+- Videocittà 2026 – Watercult @ Ex Gazometro (Ostiense) - Festival di arti digitali.
+
+SINO AL 4 GIUGNO
+- Giovanni Longo: "Come una diga" @ Accademia d'Ungheria - Mostra d'arte contemporanea.
+
+GIUGNO 2026
+- Mostra fotografica itinerante @ Vari spazi cittadini - In corso tutto il mese.
+
+MOSTRE ANNUALI / PERMANENTI
+- Studio Azzurro: "Da vicino nessuno è normale" @ Museo Laboratorio della Mente - Mostra narrativa.`;
+}
+
+function parseItalianMonth(str){
+  if(!str) return null;
+  const key = str.toLowerCase().trim();
+  return (key in ITALIAN_MONTH_MAP) ? ITALIAN_MONTH_MAP[key] : null;
+}
+
+function parseImportedText(){
+  const text = document.getElementById('import-text').value;
+  if(!text.trim()){ AppState.notify('Incolla un testo da analizzare.', 'error'); return; }
+
+  const lines = text.split('\n');
+  parsedTempEvents = [];
+  let currentHeader = null;
+  const nowYear = new Date().getFullYear();
+
+  lines.forEach(rawLine => {
+    const line = rawLine.trim();
+    if(!line) return;
+
+    const dalAl = line.match(/DAL\s+(\d{1,2})\s+AL\s+(\d{1,2})\s+([A-ZÀ-Ù]+)\s*(\d{4})?/i);
+    const sinoAl = line.match(/SINO\s+AL\s+(\d{1,2})\s+([A-ZÀ-Ù]+)\s*(\d{4})?/i);
+    const singleDay = line.match(/(?:LUNEDÌ|MARTEDÌ|MERCOLEDÌ|GIOVEDÌ|VENERDÌ|SABATO|DOMENICA)?\s*(\d{1,2})\s+([A-ZÀ-Ù]+)\s+(\d{4})\b/i);
+    const monthOnly = line.match(/^([A-ZÀ-Ù]+)\s+(\d{4})$/i) || line.match(/^([A-ZÀ-Ù]+)$/i);
+    const permanent = /MOSTRE\s+ANNUALI|PERMANENT[EI]/i.test(line);
+
+    if(dalAl){
+      const month = parseItalianMonth(dalAl[3]);
+      if(month !== null){
+        const year = dalAl[4] || nowYear;
+        currentHeader = { type:'exhibition', startDate:`${year}-${pad2(month+1)}-${pad2(+dalAl[1])}`, endDate:`${year}-${pad2(month+1)}-${pad2(+dalAl[2])}` };
+        return;
+      }
+    }
+    if(sinoAl){
+      const month = parseItalianMonth(sinoAl[2]);
+      if(month !== null){
+        const year = sinoAl[3] || nowYear;
+        currentHeader = { type:'exhibition', startDate: todayISO(), endDate:`${year}-${pad2(month+1)}-${pad2(+sinoAl[1])}` };
+        return;
+      }
+    }
+    if(permanent){
+      currentHeader = { type:'wishlist', startDate:'', endDate:'' };
+      return;
+    }
+    if(singleDay){
+      const month = parseItalianMonth(singleDay[2]);
+      if(month !== null){
+        const year = singleDay[3];
+        const d = `${year}-${pad2(month+1)}-${pad2(+singleDay[1])}`;
+        currentHeader = { type:'concert', startDate:d, endDate:d, plannedDate:d };
+        return;
+      }
+    }
+    if(monthOnly){
+      const month = parseItalianMonth(monthOnly[1]);
+      if(month !== null){
+        const year = monthOnly[2] || nowYear;
+        const last = daysInMonth(year, month);
+        currentHeader = { type:'exhibition', startDate:`${year}-${pad2(month+1)}-01`, endDate:`${year}-${pad2(month+1)}-${pad2(last)}` };
+        return;
+      }
+    }
+
+    // Item line
+    let content = line.replace(/^[-–•\s\d.)]+/, '').trim();
+    if(!content) return;
+    let title = content, location = 'Non specificato', notes = '';
+
+    if(content.includes('@')){
+      const [t, rest] = content.split('@');
+      title = t.trim();
+      const remainder = rest.trim();
+      if(remainder.includes(' - ')){
+        const [loc, ...noteParts] = remainder.split(' - ');
+        location = loc.trim(); notes = noteParts.join(' - ').trim();
+      }else location = remainder;
+    }else if(content.includes(' - ')){
+      const [t, ...noteParts] = content.split(' - ');
+      title = t.trim(); notes = noteParts.join(' - ').trim();
+    }
+    if(title.length > 90) title = title.substring(0,87) + '...';
+
+    let type = 'wishlist', startDate = '', endDate = '', plannedDate = null;
+    if(currentHeader){
+      type = currentHeader.type; startDate = currentHeader.startDate; endDate = currentHeader.endDate;
+      plannedDate = currentHeader.plannedDate || null;
+      const low = title.toLowerCase();
+      if(type === 'concert' && (low.includes('talk') || low.includes('inaugurazione') || low.includes('workshop'))) type = 'performance';
+    }
+
+    parsedTempEvents.push({
+      id: `parsed-${Date.now()}-${Math.floor(Math.random()*10000)}`,
+      title, location, type, startDate, endDate, plannedDate,
+      notes: notes || '',
+      priority: /festival|live|opening|inaugurazione/i.test(title) ? 'alta' : 'media',
+      active: true
+    });
+  });
+
+  const container = document.getElementById('parsed-items');
+  container.innerHTML = '';
+  if(parsedTempEvents.length === 0){
+    container.innerHTML = `<div class="text-xs p-2 font-semibold" style="color:var(--accent)">Nessuna riga riconosciuta. Metti un'intestazione data sopra ogni blocco di righe con "-".</div>`;
+    document.getElementById('parse-preview-container').classList.remove('hidden');
+    return;
+  }
+
+  parsedTempEvents.forEach((ev, idx) => {
+    container.insertAdjacentHTML('beforeend', `
+      <div class="rounded-lg border hairline p-2 flex items-center justify-between gap-2 text-xs">
+        <div class="min-w-0 flex-1">
+          <div class="font-semibold truncate">${AppState.categories[ev.type].icon} ${ev.title}</div>
+          <div class="text-[10px] ink-mute flex items-center gap-2 mt-0.5">
+            <span class="truncate">📍 ${ev.location}</span><span>•</span>
+            <span class="flex-shrink-0">📅 ${ev.startDate ? formatDateString(ev.startDate) : 'Senza data'}</span>
+          </div>
+        </div>
+        <button onclick="removeParsedItem(${idx})" class="w-6 h-6 rounded-md hover:opacity-70 flex items-center justify-center flex-shrink-0" style="color:var(--accent)"><i class="fa-solid fa-trash-can"></i></button>
+      </div>`);
+  });
+  document.getElementById('parse-preview-container').classList.remove('hidden');
+  const confirmBtn = document.getElementById('btn-confirm-import');
+  confirmBtn.disabled = false; confirmBtn.classList.remove('opacity-40');
+  AppState.notify(`Individuati ${parsedTempEvents.length} elementi.`, 'info');
+}
+function removeParsedItem(index){
+  parsedTempEvents.splice(index, 1);
+  if(parsedTempEvents.length === 0){
+    document.getElementById('parse-preview-container').classList.add('hidden');
+    document.getElementById('btn-confirm-import').disabled = true;
+  }else{
+    parseImportedTextFromMemory();
+  }
+}
+function parseImportedTextFromMemory(){
+  const container = document.getElementById('parsed-items');
+  container.innerHTML = '';
+  parsedTempEvents.forEach((ev, idx) => {
+    container.insertAdjacentHTML('beforeend', `
+      <div class="rounded-lg border hairline p-2 flex items-center justify-between gap-2 text-xs">
+        <div class="min-w-0 flex-1">
+          <div class="font-semibold truncate">${AppState.categories[ev.type].icon} ${ev.title}</div>
+          <div class="text-[10px] ink-mute flex items-center gap-2 mt-0.5">
+            <span class="truncate">📍 ${ev.location}</span><span>•</span>
+            <span class="flex-shrink-0">📅 ${ev.startDate ? formatDateString(ev.startDate) : 'Senza data'}</span>
+          </div>
+        </div>
+        <button onclick="removeParsedItem(${idx})" class="w-6 h-6 rounded-md hover:opacity-70 flex items-center justify-center flex-shrink-0" style="color:var(--accent)"><i class="fa-solid fa-trash-can"></i></button>
+      </div>`);
+  });
+}
+function confirmImport(){
+  if(parsedTempEvents.length === 0) return;
+  AppState.events.push(...parsedTempEvents);
+  AppState.saveData();
+  closeImportModal();
+  renderApp();
+  AppState.notify('Importazione completata.', 'success');
+}
+</script>
+
+</body>
+</html>
